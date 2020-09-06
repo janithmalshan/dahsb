@@ -1,0 +1,10 @@
+@import "variable";
+@import "contentbar";
+@import "content";
+
+.ui-navbar {
+  height: 64px;
+  background-color: $color-primary;
+  display: flex;
+}
+

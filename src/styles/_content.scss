@@ -1,0 +1,40 @@
+.ui-content {
+  margin: 0;
+  padding: 8px 0;
+  .react-tabs__tab {
+    padding: 0;
+    min-width: 220px;
+    width: 20%;
+    &-list {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  &__tab {
+    padding: 0;
+    margin: 8px 0 0 0;
+    img {}
+    &--name {
+      font-size: 16px;
+      font-weight: 400;
+      color: #a2a2a2;
+      margin: 0;
+      padding: 0 16px 0 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-transform: uppercase;
+    }
+    &--value {
+      font-size: 36px;
+      font-weight: 400;
+      color: $color-text;
+      margin: 0;
+      padding: 0 8px;
+    }
+  }
+  &__tab-pane {
+    background-color: #ffffff;
+    min-height: 400px;
+  }
+}
