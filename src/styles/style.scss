@@ -6,5 +6,14 @@
   height: 64px;
   background-color: $color-primary;
   display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 20px;
+
+  label {
+    color: #8b91e3;
+    font-weight: 400;
+    padding-right: 16px;
+  }
 }
 

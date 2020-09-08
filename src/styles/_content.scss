@@ -1,21 +1,59 @@
 .ui-content {
   margin: 0;
-  padding: 8px 0;
+  padding: 8px 24px;
+  box-sizing: border-box;
+
   .react-tabs__tab {
     padding: 0;
     min-width: 220px;
     width: 20%;
+    border: none;
+    bottom: 0;
+    vertical-align: bottom;
+
     &-list {
       margin: 0;
       padding: 0;
+      border: none;
+    }
+
+    &--selected {
+      .ui-content__tab--value {
+        font-size: 40px;
+        margin: 0;
+        transition: all .2s ease-in-out;
+      }
+
+      .ui-content__tab--spark {
+        height: 0;
+        transition: all .2s ease-in-out;
+      }
+
+      .ui-content__tab {
+        &::after {
+          height: 1000%;
+          background-color: $color-primary;
+          bottom: 0;
+          transition: all .2s ease-in-out;
+        }
+      }
     }
   }
+
   &__tab {
     padding: 0;
-    margin: 8px 0 0 0;
-    img {}
+    margin: 4px 0 0 0;
+    height: 64px;
+    overflow: hidden;
+    position: relative;
+
+    img {
+      width: 16px;
+      height: 16px;
+    }
+
     &--name {
-      font-size: 16px;
+      font-size: 10px;
       font-weight: 400;
       color: #a2a2a2;
       margin: 0;
@@ -25,16 +63,59 @@
       justify-content: space-between;
       text-transform: uppercase;
     }
+
     &--value {
-      font-size: 36px;
+      font-size: 24px;
       font-weight: 400;
       color: $color-text;
-      margin: 0;
       padding: 0 8px;
+      line-height: 1;
+      margin: -4px 0;
+      transition: all .2s ease-in-out;
+    }
+
+    &--spark {
+      height: auto;
+      overflow: hidden;
+      transition: all .2s ease-in-out;
+    }
+
+    &::after {
+      display: table;
+      content: '';
+      width: 1px;
+      height: 80%;
+      background-color: #cecece;
+      position: absolute;
+      left: 0;
+      bottom: 8px;
     }
   }
+
   &__tab-pane {
     background-color: #ffffff;
     min-height: 400px;
+
+    .ui-filter {
+      display: flex;
+
+      &__right {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      label {
+        font-size: 10px;
+        color: $color-primary;
+        font-weight: 500;
+        margin: 8px;
+
+        &.dark {
+          color: #a2a2a2;
+        }
+      }
+    }
   }
 }

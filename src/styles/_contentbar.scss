@@ -1,11 +1,45 @@
 .ui-contentbar {
   margin: 0 16px;
+
   &__title {
     font-size: 38px;
     font-weight: 100;
     margin: 0 0 16px;
     line-height: 40px;
     display: flex;
-    img {}
+
+    img {
+    }
+  }
+
+  &__nav {
+    display: flex;
+    margin: 24px 0 4px;
+
+    &--right {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    label {
+      font-size: 11px;
+      letter-spacing: 1px;
+      color: #a2a2a2;
+      font-weight: 500;
+      margin: 4px 8px;
+      text-transform: uppercase;
+    }
+
+    a {
+      font-size: 11px;
+      letter-spacing: 1px;
+      color: $color-primary;
+      font-weight: 500;
+      margin: 4px 8px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
   }
 }
